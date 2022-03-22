@@ -8,7 +8,15 @@ pipeline {
     }
     stage('Run Tests') {
       steps {
-        sh "chmod +x -R ${env.WORKSPACE}"
+       sh """
+       # print current user, group
+       id
+
+       # print folder's user group/access
+       ls -l "${mvnHome}"/..
+       ls -l "${mvnHome}"
+
+       "${mvnHome}"/bin/mvn --version
         sh './mvnw clean test'
       }
     }
