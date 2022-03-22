@@ -1,3 +1,4 @@
+package com.d2g.seleniumtests;
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -31,10 +32,6 @@ class ChromeTest {
         driver = new ChromeDriver(options);
     }
 
-    @AfterEach
-    void teardown() {
-        driver.quit();
-    }
 
     @Test
     void test() {
