@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Run Tests') {
       steps {
-       # print folder's user group/access
+       id
        ls -l "${mvnHome}"/..
        ls -l "${mvnHome}"
        sh './mvnw clean test'
