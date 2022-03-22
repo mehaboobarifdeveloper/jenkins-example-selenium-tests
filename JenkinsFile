@@ -8,8 +8,8 @@ pipeline {
     }
     stage('Run Tests') {
       steps {
-        sh "sudo chmod +x -R ${env.WORKSPACE}"
-        sh 'sudo ./mvnw clean test'
+        sh "chmod +x -R ${env.WORKSPACE}"
+        sh './mvnw clean test'
       }
     }
   } 
