@@ -9,7 +9,7 @@ pipeline {
     stage('Run Tests') {
       steps {
        id
-       ls -l "${mvnHome}"/..
+       ls -l "${mvnHome}"
        ls -l "${mvnHome}"
        sh './mvnw clean test'
       }
