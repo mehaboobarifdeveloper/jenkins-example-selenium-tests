@@ -6,7 +6,7 @@ pipeline {
         sh 'google-chrome --version'
       }
     }
-    stage('Run Tests 3') {
+    stage('Run Tests 8 - master') {
       steps {
         sh 'whoami'
         sh 'sudo mvn clean test'
