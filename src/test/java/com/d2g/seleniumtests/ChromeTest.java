@@ -40,7 +40,7 @@ class ChromeTest {
         String sutUrl = "https://bonigarcia.dev/selenium-webdriver-java/";
         driver.get(sutUrl);
         String title = driver.getTitle();
-        log.debug("==========>The title of {} is {}", sutUrl, title);
+        log.debug("This is Very Detailed Message: ==========>The title of {} is {}", sutUrl, title);
         assertThat(title).contains("Selenium WebDriver");
     }
     
