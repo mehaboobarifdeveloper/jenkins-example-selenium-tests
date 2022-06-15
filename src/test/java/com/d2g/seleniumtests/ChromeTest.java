@@ -53,7 +53,7 @@ class ChromeTest {
 
 
     public void content() {
-        System.out.println("YES");
+        System.out.println("YES ok Great");
     }
 
 }
