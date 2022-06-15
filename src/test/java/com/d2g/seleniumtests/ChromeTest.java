@@ -1,8 +1,6 @@
 package com.d2g.seleniumtests;
-import static java.lang.invoke.MethodHandles.lookup;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.slf4j.LoggerFactory.getLogger;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,7 +10,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.slf4j.Logger;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import static java.lang.invoke.MethodHandles.lookup;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.slf4j.LoggerFactory.getLogger;
 
 class ChromeTest {
 
@@ -43,11 +43,17 @@ class ChromeTest {
         log.debug("THIS IS EXTRA INFO: ==========>The title of {} is {}", sutUrl, title);
         assertThat(title).contains("Selenium WebDriver");
     }
-    
+
     @AfterEach
     void teardown() {
-      if (driver != null) {
-          driver.quit();
-      }
+        if (driver != null) {
+            driver.quit();
+        }
     }
+
+
+    public void content() {
+        System.out.println("YES ok Great");
+    }
+
 }
